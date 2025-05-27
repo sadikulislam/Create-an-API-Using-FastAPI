@@ -1,0 +1,112 @@
+{
+    "P001": {
+        "name": "Anika Rahman",
+        "city": "Dhaka",
+        "age": 28,
+        "gender": "female",
+        "height": 1.65,
+        "weight": 90.0,
+        "bmi": 33.06,
+        "verdict": "Obese"
+    },
+    "P002": {
+        "name": "Rashed Malek",
+        "city": "Chittagong",
+        "age": 35,
+        "gender": "male",
+        "height": 1.75,
+        "weight": 85.0,
+        "bmi": 27.76,
+        "verdict": "Overweight"
+    },
+    "P003": {
+        "name": "Sharmi Akter",
+        "city": "Khulna",
+        "age": 22,
+        "gender": "female",
+        "height": 1.6,
+        "weight": 45.0,
+        "bmi": 17.58,
+        "verdict": "Underweight"
+    },
+    "P004": {
+        "name": "Jubayer Hasan",
+        "city": "Sylhet",
+        "age": 40,
+        "gender": "male",
+        "height": 1.8,
+        "weight": 95.0,
+        "bmi": 29.32,
+        "verdict": "Overweight"
+    },
+    "P005": {
+        "name": "Nusrat Jahan",
+        "city": "Rajshahi",
+        "age": 30,
+        "gender": "female",
+        "height": 1.55,
+        "weight": 75.0,
+        "bmi": 31.22,
+        "verdict": "Obese"
+    },
+    "P006": {
+        "name": "Farhan Ahmed",
+        "city": "Barisal",
+        "age": 26,
+        "gender": "male",
+        "height": 1.72,
+        "weight": 58.0,
+        "bmi": 19.46,
+        "verdict": "Normal weight"
+    },
+    "P007": {
+        "name": "Tasnim Ferdous",
+        "city": "Rangpur",
+        "age": 24,
+        "gender": "female",
+        "height": 1.58,
+        "weight": 42.0,
+        "bmi": 16.85,
+        "verdict": "Underweight"
+    },
+    "P008": {
+        "name": "Imran Kabir",
+        "city": "Mymensingh",
+        "age": 45,
+        "gender": "male",
+        "height": 1.78,
+        "weight": 88.0,
+        "bmi": 27.82,
+        "verdict": "Overweight"
+    },
+    "P009": {
+        "name": "Sabrina Hossain",
+        "city": "Comilla",
+        "age": 32,
+        "gender": "female",
+        "height": 1.62,
+        "weight": 60.0,
+        "bmi": 22.75,
+        "verdict": "Normal weight"
+    },
+    "P010": {
+        "name": "Abdullah Al Mamun",
+        "city": "Gazipur",
+        "age": 50,
+        "gender": "male",
+        "height": 1.7,
+        "weight": 92.0,
+        "bmi": 31.67,
+        "verdict": "Obese"
+    },
+    "P011": {
+        "name": "Abul Kalam",
+        "city": "Rajshahi",
+        "age": 30,
+        "gender": "male",
+        "height": 1.5,
+        "weight": 70.0,
+        "bmi": 31.11,
+        "verdict": "Obese"
+    }
+}
