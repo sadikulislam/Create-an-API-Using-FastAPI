@@ -80,22 +80,22 @@
         "verdict": "Overweight"
     },
     "P009": {
-        "name": "Sabrina Hossain",
+        "name": "Nazia Hossain",
         "city": "Comilla",
-        "age": 32,
+        "age": 24,
         "gender": "female",
-        "height": 1.62,
+        "height": 1.6,
         "weight": 60.0,
         "bmi": 22.75,
         "verdict": "Normal weight"
     },
     "P010": {
         "name": "Abdullah Al Mamun",
-        "city": "Gazipur",
+        "city": "Rajshahi",
         "age": 50,
         "gender": "male",
         "height": 1.7,
-        "weight": 92.0,
+        "weight": 85.0,
         "bmi": 31.67,
         "verdict": "Obese"
     },

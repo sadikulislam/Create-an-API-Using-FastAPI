@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Path, HTTPException, Query
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel, Field, computed_field
-from typing import Annotated, Literal
+from typing import Annotated, Literal, Optional
 import json
 
 app = FastAPI()
@@ -39,6 +39,15 @@ class Patient(BaseModel):
         else:
             return 'Obese'
 
+class PatientUpdate(BaseModel):
+    name: Annotated[Optional[str], Field(default=None)]
+    city: Annotated[Optional[str], Field(default=None)]
+    age: Annotated[Optional[int], Field(default=None, gt=0)]
+    gender: Annotated[Literal['male', 'female', 'other'], Field(default=None)]
+    height: Annotated[Optional[float], Field(default=None, gt=0)]
+    weight: Annotated[Optional[float], Field(default=None, gt=0)]
+
+
 def load_data():
     # Simulate loading data from a JSON
     with open("patients.json", "r") as f:
@@ -49,7 +58,6 @@ def save_data(data):
     # Simulate saving data to a JSON
     with open("patients.json", "w") as f:
         json.dump(data, f, indent=4)
-
 
 
 @app.get("/")
@@ -117,7 +125,28 @@ def add_patient(patient: Patient):
 
     save_data(data)
 
-    return JSONResponse(status_code=201, content={'message':'patient created successfully'})
+    return JSONResponse(status_code=201, content={'message':'Patient created successfully'})
 
 
-    
+@app.put("/update/{patient_id}")
+def update_patient(patient_id: str, patient_update: PatientUpdate):
+     data = load_data()
+
+     if patient_id not in data:
+         raise HTTPException(status_code=404, detail="Patient not found")
+
+     patient_data = data[patient_id]
+
+     # Update the fields if they are provided
+     updated_patient_data = patient_update.model_dump(exclude_unset=True)
+
+     for field, value in updated_patient_data.items():
+         if value is not None:
+             patient_data[field] = value
+
+     data[patient_id] = patient_data
+
+     save_data(data)
+
+     return JSONResponse(status_code=200, content={'message': 'Patient updated successfully'})
+     
